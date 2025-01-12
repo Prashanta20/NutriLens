@@ -1,0 +1,111 @@
+.navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;  
+    margin: 0px 170px;
+}
+
+.logo-container {
+    flex: 1; /* Ensures the logo takes up the leftmost space */
+
+  }
+  
+.navbar img {
+    margin-top: 5px;
+    height: 110px; /* Adjust logo size */
+}
+
+.nav-menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    gap: 60px;
+    font-size: 23px;
+    
+}
+.nav-menu li:hover{
+    transform: scale(1.1);
+    transition: 0.3s ease;
+}
+
+.anchor-link{
+    text-decoration: none;
+    color: white;
+    position: relative;
+}
+
+.anchor-link::after {
+    content: "";
+    position: absolute;
+    height: 2px;
+    width: 0;
+    bottom: -7px;
+    left: 0;
+    background-color: lightgoldenrodyellow;
+    transition: all 0.3s ease;
+}
+
+.anchor-link:hover::after{
+    width: 70%;
+}
+
+.nav-mob-open{
+    width: 30px;
+    height: 30px;
+    filter: invert(100%) brightness(100%) contrast(100%);
+    display: none;
+}
+
+.nav-mob-close{
+    width: 30px;
+    height: 30px;
+    filter: invert(100%) brightness(100%) contrast(100%);
+    display: none;
+}
+
+@media(max-width: 768px){
+    .navbar{
+        margin: 20px 50px;
+    }
+    .nav-mob-open{
+        margin-top: 30px;
+        display: block;
+        position: fixed;
+        right: 30px;
+    }
+    .nav-mob-close{
+        display: block;
+        position: relative;
+        top: 30px;
+        left: 290px;
+        width: 30px;
+    }
+    .navbar img {
+        margin-top: 5px;
+        height: 90px; /* Adjust logo size */
+    }
+
+    .nav-menu{
+        display: flex;
+        position: fixed;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        top: 0;
+        gap: 30px;
+        background: linear-gradient(180deg, #c0392b, #8e44ad, #2c3e50);
+        width: 350px;
+        height: 100%;
+        z-index: 2;
+        transition: right 0.5s;
+        right: -350px;
+    }
+    .nav-menu li{
+        font-size: 30px;
+        padding-left: 100px;
+        flex-direction: row;
+        gap: 20px;
+    }
+
+}

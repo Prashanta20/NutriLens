@@ -1,0 +1,181 @@
+/* Styling the NutriLens Logo with Multi-Color Gradient */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
+h1 {
+    font-size: 3rem; /* Larger font size for emphasis */
+    font-family: 'Montserrat', sans-serif; /* Clean, bold font family */
+    font-weight: 700; /* Extra bold text */
+    text-transform: uppercase; /* Uppercase for strong branding */
+    letter-spacing: 3px; /* Spacing between letters */
+    margin: 20px 0; /* Spacing around the logo */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    background: linear-gradient(90deg, #4caf50, #3cc4d9, #ff9800); /* Green, teal, and orange gradient */
+    -webkit-background-clip: text; /* Clip the gradient to the text */
+    -webkit-text-fill-color: transparent; /* Make the gradient visible on the text */
+    transition: transform 0.3s ease, text-shadow 0.3s ease; /* Smooth hover transitions */
+}
+
+/* Hover effect for the logo */
+h1:hover {
+    transform: scale(1.1); /* Slightly enlarge the logo on hover */
+    text-shadow: 3px 3px 8px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Toggle Switch Container */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+/* Hide the default checkbox */
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider background */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+/* The circle inside the slider */
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* When the checkbox is checked, change the background */
+.toggle-switch input:checked + .slider {
+  background-color: #4caf50;
+}
+
+/* Move the circle to the right when checked */
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+
+/* Toggle Switch Container */
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+}
+
+.toggle-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: 0.4s;
+  border-radius: 25px;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 19px;
+  width: 19px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.4s;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch input:checked + .slider {
+  background-color: #4caf50;
+}
+
+.toggle-switch input:checked + .slider:before {
+  transform: translateX(25px);
+}
+
+/* File Upload Container */
+.file-upload-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.file-upload-label {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.file-upload-label:hover {
+  background-color: #45a049;
+}
+
+.file-upload-input {
+  display: none;
+}
+
+.file-upload-filename {
+  font-size: 14px;
+  color: #555;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  max-width: 300px;
+  text-align: center;
+}
+
+/* Analyze Button */
+.analyze-button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.analyze-button:hover {
+  background-color: #333;
+}
+
+
