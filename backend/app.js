@@ -5,6 +5,8 @@ const axios = require("axios");
 const path = require("path");
 const fs = require("fs");
 
+require('dotenv').config();
+
 const app = express();
 const upload = multer({ dest: "uploads/" });
 
@@ -13,8 +15,11 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Nutritionix API credentials
-const NUTRITIONIX_APP_ID = "2d1ed94e";
-const NUTRITIONIX_API_KEY = "06afb61b3768b0bbb3dbb750c375955b";
+const NUTRITIONIX_APP_ID = process.env.NUTRITIONIX_APP_ID;
+const NUTRITIONIX_API_KEY = process.env.NUTRITIONIX_API_KEY;
+
+// RoboFLow API Key
+const ROBOFLOW_API_KEY = process.env.ROBOFLOW_API_KEY;
 
 app.post("/analyze", upload.single("file"), async (req, res) => {
     try {
@@ -28,7 +33,7 @@ app.post("/analyze", upload.single("file"), async (req, res) => {
             "https://detect.roboflow.com/food-class/2",
             imageBase64,
             {
-                params: { api_key: "SqG668sYLxvRXA9SX3xI" }, // Replace with your actual API key
+                params: { api_key: ROBOFLOW_API_KEY }, // Replace with your actual API key
                 headers: { "Content-Type": "application/x-www-form-urlencoded" },
             }
         );

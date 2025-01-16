@@ -19,8 +19,8 @@ NutriLens is a web-based application that uses AI to analyze food items in image
 
 ## **Contributors**
 
-- **Your Name**: Developer
-- **Collaborators**: Additional contributors (if any)
+- **Developer**: Prashanta Kandel
+- **Collaborators**: Harold Le, Irfan Shahid, Promish Kandel
 
 ## **Demo**
 
@@ -48,7 +48,7 @@ Make sure you have the following installed:
 ### **1. Clone the Repository**
 
 ```bash
-git clone https://github.com/your-username/nutrilens.git
+git clone https://github.com/Prashanta20/nutrilens.git
 cd nutrilens
 ```
 
@@ -77,6 +77,7 @@ Install Python dependencies:
 ```bash
 pip install torch torchvision flask flask-cors axios pillow
 ```
+
 #### **d. Start the Backend Server**
 
 Run the backend:
@@ -199,4 +200,3 @@ frontend/nutrilens/
 ## **License**
 
 This project is licensed under the MIT License.
-
